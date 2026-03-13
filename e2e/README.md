@@ -40,12 +40,18 @@ Para la visualización de reportes locales con Allure es necesario tener instala
 
 ## 4. Instalación
 
-### 4.1 Clonar el repositorio y acceder
+### 4.1Opción 1 – Descargar ZIP
+
+1. Descargar el proyecto.
+2. Descomprimirlo.
+3. Abrir la carpeta del proyecto.
+
+### 4.2 Clonar el repositorio y acceder
 
 Ejecutar en la terminal:
 
 ```shell
-git clone <url-del-repositorio>
+git clone https://github.com/HeinerL97/prueba_tecnica_DEVSU.git
 ```
 
 Entrar a la carpeta del proyecto:
@@ -54,7 +60,7 @@ Entrar a la carpeta del proyecto:
 cd e2e
 ```
 
-### 4.2 Configuración del entorno
+### 4.3 Configuración del entorno
 
 1. **Crear entorno virtual**
    Se recomienda crear un entorno virtual para aislar las dependencias.
@@ -62,7 +68,6 @@ cd e2e
    ```shell
    python -m venv venv
    ```
-
 2. **Activar el entorno virtual**
 
    * Windows:
@@ -73,7 +78,6 @@ cd e2e
      ```shell
      source venv/bin/activate
      ```
-
 3. **Instalar dependencias**
 
    ```shell
@@ -104,17 +108,17 @@ El escenario principal valida el flujo de compra exitoso ("Happy Path"):
 
 Ejecuta todas las pruebas desde la terminal:
 
-   ```shell
+```shell
    pytest
-   ```
+```
 
 ### 7.2 Ejecución con generación de reportes
 
 Ejecuta las pruebas y guarda los resultados para Allure:
 
-   ```shell
+```shell
    pytest --alluredir=allure-results
-   ```
+```
 
 ## 8. Generación de reportes
 
@@ -127,4 +131,3 @@ allure serve allure-results
 ```
 
 Esto abrirá automáticamente una ventana en tu navegador con estadísticas, gráficos y el paso a paso de la ejecución.
-

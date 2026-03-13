@@ -68,7 +68,8 @@ Existen dos formas.
 Ejecutar en la terminal:
 
 ```shell
-git clone <url-del-repositorio>
+git clone https://github.com/HeinerL97/prueba_tecnica_DEVSU.git
+
 ```
 
 Entrar a la carpeta del proyecto:
