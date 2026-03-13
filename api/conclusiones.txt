@@ -1,0 +1,21 @@
+CONCLUSIONES DEL EJERCICIO
+
+Se automatizaron las pruebas de la API Petstore utilizando Cypress.
+
+Se implementaron pruebas para validar el ciclo completo CRUD del recurso usuario:
+
+1. Creación de usuario
+2. Búsqueda del usuario creado
+3. Actualización del nombre y correo
+4. Validación de los datos actualizados
+5. Eliminación del usuario
+
+Se implementaron validaciones sobre:
+
+- Código de estado HTTP
+- Integridad de los datos devueltos
+- Persistencia de los cambios
+
+Se utilizaron usuarios dinámicos para evitar conflictos entre ejecuciones.
+
+Adicionalmente se generaron reportes automáticos utilizando Mochawesome para evidenciar la ejecución de las pruebas y generando un html de reporte.

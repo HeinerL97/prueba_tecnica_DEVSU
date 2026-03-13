@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-13T00:36:21.940Z",
+    "end": "2026-03-13T00:36:23.033Z",
+    "duration": 1093,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2c76475c-b1e7-4eef-9d2d-d41655611a40",
+      "title": "",
+      "fullFile": "cypress\\e2e\\petstore\\user.cy.js",
+      "file": "cypress\\e2e\\petstore\\user.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "28dd5055-9113-4ec6-846c-ee23837d368e",
+          "title": "Petstore API - CRUD Usuario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Crear usuario",
+              "fullTitle": "Petstore API - CRUD Usuario Crear usuario",
+              "timedOut": null,
+              "duration": 516,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: '/user',\n  body: user\n}).then(response => {\n  cy.log(\"Usuario creado:\", JSON.stringify(response.body));\n  expect(response.status).to.eq(200);\n  expect(response.body.message).to.eq(String(user.id));\n});",
+              "err": {},
+              "uuid": "07a50084-82dd-49da-90ff-bea53a9a8a38",
+              "parentUUID": "28dd5055-9113-4ec6-846c-ee23837d368e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buscar usuario creado",
+              "fullTitle": "Petstore API - CRUD Usuario Buscar usuario creado",
+              "timedOut": null,
+              "duration": 121,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request(`/user/${username}`).then(response => {\n  cy.log(\"Usuario encontrado:\", JSON.stringify(response.body));\n  expect(response.status).to.eq(200);\n  expect(response.body.username).to.eq(username);\n  expect(response.body.email).to.eq(user.email);\n});",
+              "err": {},
+              "uuid": "87766eb8-2167-4dd1-82c1-70316f4989fb",
+              "parentUUID": "28dd5055-9113-4ec6-846c-ee23837d368e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Actualizar nombre y correo",
+              "fullTitle": "Petstore API - CRUD Usuario Actualizar nombre y correo",
+              "timedOut": null,
+              "duration": 116,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'PUT',\n  url: `/user/${username}`,\n  body: updatedUser\n}).then(response => {\n  cy.log(\"Usuario actualizado:\", JSON.stringify(response.body));\n  expect(response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "c613aef6-11d1-4ad0-9bad-7b789cb24ec2",
+              "parentUUID": "28dd5055-9113-4ec6-846c-ee23837d368e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buscar usuario actualizado",
+              "fullTitle": "Petstore API - CRUD Usuario Buscar usuario actualizado",
+              "timedOut": null,
+              "duration": 118,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request(`/user/${username}`).then(response => {\n  cy.log(\"Datos actualizados:\", JSON.stringify(response.body));\n  expect(response.status).to.eq(200);\n  expect(response.body.firstName).to.eq(updatedUser.firstName);\n  expect(response.body.email).to.eq(updatedUser.email);\n});",
+              "err": {},
+              "uuid": "93780f17-4ac2-46a4-8da8-ef8638a67555",
+              "parentUUID": "28dd5055-9113-4ec6-846c-ee23837d368e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar usuario",
+              "fullTitle": "Petstore API - CRUD Usuario Eliminar usuario",
+              "timedOut": null,
+              "duration": 112,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'DELETE',\n  url: `/user/${username}`\n}).then(response => {\n  cy.log(\"Usuario eliminado:\", JSON.stringify(response.body));\n  expect(response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "494765a0-0d58-4e83-8f1a-47895d9c914b",
+              "parentUUID": "28dd5055-9113-4ec6-846c-ee23837d368e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "07a50084-82dd-49da-90ff-bea53a9a8a38",
+            "87766eb8-2167-4dd1-82c1-70316f4989fb",
+            "c613aef6-11d1-4ad0-9bad-7b789cb24ec2",
+            "93780f17-4ac2-46a4-8da8-ef8638a67555",
+            "494765a0-0d58-4e83-8f1a-47895d9c914b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 983,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reporte",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

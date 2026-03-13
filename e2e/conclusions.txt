@@ -1,0 +1,14 @@
+Conclusiones del ejercicio:
+
+Se implementó una prueba E2E automatizada para el flujo de compra en la página Demoblaze.
+
+El flujo automatizado incluye:
+- selección de dos productos
+- agregado al carrito
+- visualización del carrito
+- diligenciamiento del formulario de compra
+- confirmación de la compra
+
+Se utilizó el patrón Page Object Model para mejorar la mantenibilidad del código y separar la lógica de las páginas del flujo de prueba.
+
+Las herramientas utilizadas fueron Selenium WebDriver y Pytest con Python y un reporte de generacion de reporte allure.
